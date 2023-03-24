@@ -10,14 +10,13 @@ export const forgotPassword = async (email) => {
     forgotBtn.textContent = 'Processing...';
     const res = await axios({
       method: 'POST',
-      url: 'http://127.0.0.1:8000/api/v1/users/forgotPassword',
+      url: '/api/v1/users/forgotPassword',
       data: {
         email,
       },
     });
     forgotBtn.textContent = 'Send';
     if (res.data.status === 'success') {
-      console.log(res);
       showAlert('success', 'Email succesfully sent!');
     }
   } catch (err) {
@@ -29,10 +28,9 @@ export const resetPassword = async (password, passwordConfirm) => {
     const resetBtn = document.getElementById('reset-btn');
     resetBtn.textContent = 'Processing...';
     const token = window.location.pathname.split('/').pop();
-    console.log(token);
     const res = await axios({
       method: 'PATCH',
-      url: `http://127.0.0.1:8000/api/v1/users/resetPassword/${token}`,
+      url: `/api/v1/users/resetPassword/${token}`,
       data: {
         password,
         passwordConfirm,
