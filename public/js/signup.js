@@ -18,6 +18,8 @@ export const signup = async (name, email, password, passwordConfirm) => {
       },
     });
 
+    console.log(res);
+
     signupBtn.textContent = 'Signup';
 
     if (res.data.status === 'success') {

@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import 'regenerator-runtime/runtime';
+// import 'regenerator-runtime/runtime';
 import { login, logout } from './login.js';
 import { displayMap } from './mapbox.js';
 import { updateSettings } from './updateSettings.js';
