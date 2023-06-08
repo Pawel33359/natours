@@ -6,6 +6,6 @@ On my own I added to it: middleware to make sure user booked a tour before leavi
 
 ## live demo
 
-https://natours-production-7802.up.railway.app/
+https://helpful-bear-fez.cyclic.app/
 \
 fake credit card for booking: 4242 4242 4242 4242
